@@ -52,7 +52,7 @@ my_account_config = AccountConfiguration("your_username", "your_password")
 player = Player(account_configuration=my_account_config, server_configuration=ShowdownServerConfiguration)
 ```
 
-## Docker
+## 設定（Docker）
 
 `docker-compose up --build`で起動
 
