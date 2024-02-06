@@ -9,6 +9,8 @@ services:
       - "8000:8000"
     volumes:
       - .:/usr/src/app/PokeLLMon
-    tty:
-      true
+    tty: true
+    env_file:
+      - .env
+    
     # command: npm start
