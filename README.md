@@ -27,6 +27,7 @@ node pokemon-showdown start --no-security
 ブラウザで "http://localhost:8000/" にアクセスします。
 ```
 
+![](doc\pokemon-showdown.png)
 
 ### OpenAI APIの設定
 
@@ -34,6 +35,10 @@ GPT-4 APIを [https://platform.openai.com/account/api-keys](https://platform.ope
 ### プレイヤーの設定
 
 [https://play.pokemonshowdown.com/](https://play.pokemonshowdown.com/)  でアカウントに登録し、パスワードを取得します。
+
+アカウント登録方法はこちら👇
+https://aoi428.hatenablog.com/entry/2017/04/25/055853
+
 
 ```sh
 from poke_env import AccountConfiguration
