@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pokemon-showdown:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/src/app
+    tty:
+      true
+    # command: npm start
