@@ -1,19 +1,21 @@
 # Python 3.10イメージをベースに使用
-FROM python:3.10-slim
+# FROM python:3.10-slim
+FROM nikolaik/python-nodejs:python3.11-nodejs21
 
 # gitとNode.jsをインストール
 RUN apt-get update && apt-get install -y git curl
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt install -y nodejs
-# RUN apt install -y npm
 
 # アプリケーションディレクトリを作成
 WORKDIR /usr/src/app
 
 # # pokemon-showdownリポジトリをクローン
-# RUN git clone https://github.com/smogon/pokemon-showdown.git .
-# RUN npm install
-# RUN cp config/config-example.js config/config.js
+RUN git clone https://github.com/smogon/pokemon-showdown.git 
+WORKDIR /usr/src/app/pokemon-showdown
+RUN npm install
+RUN cp config/config-example.js config/config.js
 
-# # アプリケーションがリッスンするポートを指定
-# EXPOSE 8000
+
+# アプリケーションがリッスンするポートを指定
+EXPOSE 8000
+# アプリケーションを起動するコマンド
+CMD [ "node", "pokemon-showdown", "start", "--no-security" ]
