@@ -14,6 +14,9 @@ WORKDIR /usr/src/app/pokemon-showdown
 RUN npm install
 RUN cp config/config-example.js config/config.js
 
+# PokeLLMon 環境一式をダウンロード
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
 # アプリケーションがリッスンするポートを指定
 EXPOSE 8000
