@@ -13,7 +13,7 @@ openai >= 1.7.2
 ```
 
 
-## 設定
+## 設定（Local）
 ### ローカルのポケモンショーダウンサーバー（バトルエンジン）の設定
 1. Node.js v10以上をインストールします。
 2. ポケモンショーダウンのリポジトリをクローンしてセットアップします：
@@ -51,6 +51,37 @@ from poke_env import AccountConfiguration, ShowdownServerConfiguration
 my_account_config = AccountConfiguration("your_username", "your_password")
 player = Player(account_configuration=my_account_config, server_configuration=ShowdownServerConfiguration)
 ```
+
+## Docker
+
+`docker-compose up --build`で起動
+
+```bash
+C:\Prj\PokeLLMon>docker-compose up --build
+[+] Building 0.0s (0/0)  docker:default
+[+] Building 748.1s (14/14) 
+
+...
+
+showdown                                                                                                                  0.0s
+[+] Running 1/1
+ ✔ Container pokellmon-pokemon-showdown-1  Recreated                                                                                                                           2.1s
+Attaching to pokemon-showdown-1
+pokemon-showdown-1  | RESTORE CHATROOM: lobby
+pokemon-showdown-1  | RESTORE CHATROOM: staff
+pokemon-showdown-1  | Worker 1 now listening on 0.0.0.0:8000
+pokemon-showdown-1  | Test your server at http://localhost:8000
+
+```
+
+`docker-compose exec pokemon-showdown /bin/bash`でコンテナ内って移動する
+
+```bash
+C:\Prj\PokeLLMon>docker-compose exec pokemon-showdown /bin/bash
+root@0efdf8c76f75:/usr/src/app/pokemon-showdown# cd ../PokeLLMon/
+root@0efdf8c76f75:/usr/src/app/PokeLLMon#
+```
+
 
 
 ## ポケモンバトルをしよう!!
