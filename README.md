@@ -9,7 +9,6 @@ PokéLLMon
   <img src="./resource/LLM_attrition_strategy.gif" alt="PokemonBattle">
 </div>
 
-ドキュメントは3日以内に完全に更新されます。
 ## 必要条件:
 
 ```sh
