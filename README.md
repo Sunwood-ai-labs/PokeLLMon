@@ -1,4 +1,9 @@
-# PokéLLMon
+<h1>
+<img src="https://raw.githubusercontent.com/Sunwood-ai-labs/PokeLLMon/main/doc/icon.png" height=300px align="right"/>
+PokéLLMon
+</h1>
+
+
 
 これは、「PokéLLMon: A Human-Parity Agent for Pokémon battles with Large Language Models（ポケモンバトルのための人間と同等レベルのエージェント、PokéLLMon）」という論文の実装です。<div align="center">
   <img src="./resource/LLM_attrition_strategy.gif" alt="PokemonBattle">
